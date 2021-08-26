@@ -65,3 +65,27 @@ SDLC is a systematic process for building software that ensures the quality and 
 On-prem: the server is local, the owner is responsible for everything. This is the most private solution, it can also be the most expensive and the most difficult to maintain and secure.<br/>
 Hybrid: part of data/service is local and part of it is on the cloud. It is a mixture of public and private solutions. <br/>
 Multi-cloud: the server is running on multiple clouds at the same time, to minimize risks. In case one of the cloud services is compromised, it is still running on the other. This is the most secure solution. Multi-cloud can use both public or private clouds.
+
+## Vagrant
+
+Within the VagrantFile, add the following line:
+config.vm.provision "shell", path: "provision.sh"
+Create a file named "provision.sh" within the same directory as the "VagrantFile". The script should be:
+!#/bin/bash
+
+sudo apt-get update -y
+
+sudo apt-get upgrade -y
+
+sudo apt-get install nginx -y
+
+### Installing dependencies for the 'app'
+
+- install npm: sudo apt-get install npm -y
+- install python-software-properties: sudo apt-get install python-software-properties -y
+- new source for nodejs: curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+- install nodejs sudo apt-get install nodejs -y
+- Change to the app directory
+- Inside the app directory, install pm2 sudo npm install pm2 -y
+- Install some relevant npm package files (app will throw an error if this is not done) npm install
+- Run npm: npm start
