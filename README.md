@@ -81,11 +81,11 @@ sudo apt-get install nginx -y
 
 ### Installing dependencies for the 'app'
 
-- install npm: sudo apt-get install npm -y
-- install python-software-properties: sudo apt-get install python-software-properties -y
-- new source for nodejs: curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-- install nodejs sudo apt-get install nodejs -y
+- install npm: <code>sudo apt-get install npm -y</code>
+- install python-software-properties: <code>sudo apt-get install python-software-properties -y</code>
+- new source for nodejs: <code>curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -</code>
+- install nodejs <code>sudo apt-get install nodejs -y</code>
 - Change to the app directory
-- Inside the app directory, install pm2 sudo npm install pm2 -y
-- Install some relevant npm package files (app will throw an error if this is not done) npm install
-- Run npm: npm start
+- Inside the app directory, install pm2 <code>sudo npm install pm2 -y</code>
+- Install some relevant npm package files (app will throw an error if this is not done) <code>npm install</code>
+- Run npm: <code>npm start</code>
