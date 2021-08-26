@@ -4,7 +4,7 @@
 #### Risk factors with SDLC stages
 ##### Monitoring
 
--Ease of use
--Flexibility
--Robustness
--Cost
+- Ease of use
+- Flexibility
+- Robustness
+- Cost
