@@ -60,8 +60,8 @@ SDLC is a systematic process for building software that ensures the quality and 
 
 
 **What is on-prem cloud, hybrid cloud, multi-cloud?** <br/>
-![3 Clouds](https://markedupdotblog.files.wordpress.com/2019/09/picture1.png)
+![Cloud vs On-prem](https://cdn2.hubspot.net/hubfs/2295024/blog-images/Cloud%20Vs%20On%20Premises.jpg)
+![3 Clouds](https://miro.medium.com/max/1066/1*LRFaWc35HsUyKikmrzD9qw.png)
 On-prem: the server is local, the owner is responsible for everything. This is the most private solution, it can also be the most expensive and the most difficult to maintain and secure.<br/>
 Hybrid: part of data/service is local and part of it is on the cloud. It is a mixture of public and private solutions. <br/>
-Multi-cloud: the server is running on multiple clouds at the same time, to minimize risks. In case one of the cloud services is compromised, it is still running on the other. This is the most secure solution.
-
+Multi-cloud: the server is running on multiple clouds at the same time, to minimize risks. In case one of the cloud services is compromised, it is still running on the other. This is the most secure solution. Multi-cloud can use both public or private clouds.
