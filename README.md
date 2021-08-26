@@ -50,12 +50,12 @@ SDLC is a systematic process for building software that ensures the quality and 
 - Phase 7: Maintenance
 
 **What are the Risk levels at each stage of SDLC?**
-- Phase 1: Requirement collection and analysis **Low**
-- Phase 2: Feasibility study **Low**
-- Phase 3: Design **Medium**
-- Phase 4: Coding **High**
-- Phase 5: Testing **High**
-- Phase 6: Installation/Deployment **High**
-- Phase 7: Maintenance **High**
+- Phase 1:  **Low**
+- Phase 2:  **Low**
+- Phase 3:  **Medium**
+- Phase 4:  **High**
+- Phase 5:  **High**
+- Phase 6:  **High**
+- Phase 7:  **High**
 
 
