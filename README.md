@@ -40,7 +40,7 @@ Top benefits: <br/>
 **What is SDLC and stages of SDLC**
 - What is SDLC and what are the stages of it?
 SDLC is a systematic process for building software that ensures the quality and correctness of the software built.
-! [SDLC diagram] (https://miro.medium.com/max/2500/0*qZ1JOnVpPokvnr69.jpg)
+![SDLC diagram](https://miro.medium.com/max/2500/0*qZ1JOnVpPokvnr69.jpg)
 - Phase 1: Requirement collection and analysis
 - Phase 2: Feasibility study
 - Phase 3: Design
