@@ -99,11 +99,11 @@ sudo apt-get install nginx -y</code>
 ### Configuring reverse proxy for nginx
 
 <code>sudo nano /etc/nginx/sites-available/default</code><br/>
-<code>location / {<br/>
-        proxy_pass http://localhost:8080;<br/>
-        proxy_http_version 1.1;<br/>
-        proxy_set_header Upgrade $http_upgrade;<br/>
-        proxy_set_header Connection 'upgrade';<br/>
-        proxy_set_header Host $host;<br/>
-        proxy_cache_bypass $http_upgrade;<br/>
-    }</code>
+<code>location / {</code><br/>
+<code>        proxy_pass http://localhost:8080;</code><br/>
+<code>        proxy_http_version 1.1;<br/>
+<code>        proxy_set_header Upgrade $http_upgrade;</code><br/>
+<code>        proxy_set_header Connection 'upgrade';</code><br/>
+<code>        proxy_set_header Host $host;</code><br/>
+<code>        proxy_cache_bypass $http_upgrade;</code><br/>
+    <code>}</code>
