@@ -107,3 +107,18 @@ sudo apt-get install nginx -y</code>
 <code>        proxy_set_header Host $host;</code><br/>
 <code>        proxy_cache_bypass $http_upgrade;</code><br/>
     <code>}</code>
+
+Restart nginx:
+
+<code>sudo nginx -t <br/>
+sudo systemctl restart nginx</code>
+
+### On db machine:
+
+<code>sudo nano /etc/mongod.conf</code>
+<br/>
+Change IP to 0.0.0.0 <br/>
+
+Restart mongod:<br/>
+<code>sudo systemctl restart mongod</code><br/>
+<code>sudo systemctl enable mongod</code><br/>

@@ -10,9 +10,11 @@ sudo apt-get install nodejs -y
 cd /home/vagrant/app
 sudo npm install pm2 -g
 npm install
-export DB_HOST=192.168.10.150:27017/posts
-echo "export DB_HOST=192.168.10.150:27017/posts" >> ~/.bashrc
-source ~/.bashrc
+# export DB_HOST=192.168.10.150:27017/posts
+# echo "export DB_HOST=192.168.10.150:27017/posts" >> ~/.bashrc
+# source ~/.bashrc
+# sudo nginx -t 
+# sudo systemctl restart nginx
 
 # sudo apt-get install git-core zsh -y
 # sudo sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -y)"
