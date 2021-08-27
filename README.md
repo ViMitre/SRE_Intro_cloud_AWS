@@ -74,9 +74,7 @@ Create a file named "provision.sh" within the same directory as the "VagrantFile
 <code>!#/bin/bash
 
 sudo apt-get update -y
-
 sudo apt-get upgrade -y
-
 sudo apt-get install nginx -y</code>
 
 ### Installing dependencies for the 'app'
