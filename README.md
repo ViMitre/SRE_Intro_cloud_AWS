@@ -100,7 +100,7 @@ sudo apt-get install nginx -y</code>
 
 <code>sudo nano /etc/nginx/sites-available/default</code><br/>
 <code>location / {</code><br/>
-<code>        proxy_pass http://localhost:8080;</code><br/>
+<code>        proxy_pass http://localhost:3000;</code><br/>
 <code>        proxy_http_version 1.1;</code><br/>
 <code>        proxy_set_header Upgrade $http_upgrade;</code><br/>
 <code>        proxy_set_header Connection 'upgrade';</code><br/>
