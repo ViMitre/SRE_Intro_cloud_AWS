@@ -69,15 +69,15 @@ Multi-cloud: the server is running on multiple clouds at the same time, to minim
 ## Vagrant
 
 Within the VagrantFile, add the following line:
-config.vm.provision "shell", path: "provision.sh"
-Create a file named "provision.sh" within the same directory as the "VagrantFile". The script should be:
-!#/bin/bash
+config.vm.provision "shell", path: "provision.sh" <br/>
+Create a file named "provision.sh" within the same directory as the "VagrantFile". The script should be:<br/>
+<code>!#/bin/bash
 
 sudo apt-get update -y
 
 sudo apt-get upgrade -y
 
-sudo apt-get install nginx -y
+sudo apt-get install nginx -y</code>
 
 ### Installing dependencies for the 'app'
 
