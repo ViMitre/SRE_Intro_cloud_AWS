@@ -90,3 +90,8 @@ sudo apt-get install nginx -y</code>
 - Inside the app directory, install pm2 <code>sudo npm install pm2 -y</code>
 - Install some relevant npm package files (app will throw an error if this is not done) <code>npm install</code>
 - Run npm: <code>npm start</code>
+
+### Adding environment variable
+<code>export NAME=VALUE <br/></code>
+#### Making it permanent: adding it to the .bashrc file:
+<code>echo "export NAME=VALUE" >> ~./bashrc </code>
