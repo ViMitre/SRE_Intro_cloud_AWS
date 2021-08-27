@@ -67,6 +67,7 @@ Hybrid: part of data/service is local and part of it is on the cloud. It is a mi
 Multi-cloud: the server is running on multiple clouds at the same time, to minimize risks. In case one of the cloud services is compromised, it is still running on the other. This is the most secure solution. Multi-cloud can use both public or private clouds.
 
 ## Vagrant
+![Tasks](https://trello.com/1/cards/6128b88a3b34072ee9d3cc95/attachments/6128b89955e40a89ca30466c/download/Screenshot_(67).png)
 
 Within the VagrantFile, add the following line:
 config.vm.provision "shell", path: "provision.sh" <br/>
