@@ -119,6 +119,6 @@ sudo systemctl restart nginx</code>
 <br/>
 Change IP to 0.0.0.0 <br/>
 
-Restart mongod:<br/>
+Restart mongo:<br/>
 <code>sudo systemctl restart mongod</code><br/>
 <code>sudo systemctl enable mongod</code><br/>
