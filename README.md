@@ -84,7 +84,7 @@ sudo apt-get install nginx -y</code>
 - new source for nodejs: <code>curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -</code>
 - install nodejs <code>sudo apt-get install nodejs -y</code>
 - Change to the app directory
--  <code>sudo apt-get install python-software-properties </code><br/>
+-<code>sudo apt-get install python-software-properties </code><br/>
 <code>curl -sL https://deb.nodesource.com/setup_6.x | </code><br/>
 <code>sudo -E bash - </code>
 - Inside the app directory, install pm2 <code>sudo npm install pm2 -y</code>
