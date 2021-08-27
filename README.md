@@ -83,7 +83,7 @@ sudo apt-get install nginx -y</code>
 - install python-software-properties: <code>sudo apt-get install python-software-properties -y</code>
 - new source for nodejs: <code>curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -</code>
 - install nodejs <code>sudo apt-get install nodejs -y</code>
-- Change to the app directory
+- Change to the app directory <br/>
 -<code>sudo apt-get install python-software-properties </code><br/>
 <code>curl -sL https://deb.nodesource.com/setup_6.x | </code><br/>
 <code>sudo -E bash - </code>
