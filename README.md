@@ -67,59 +67,64 @@ Hybrid: part of data/service is local and part of it is on the cloud. It is a mi
 Multi-cloud: the server is running on multiple clouds at the same time, to minimize risks. In case one of the cloud services is compromised, it is still running on the other. This is the most secure solution. Multi-cloud can use both public or private clouds.
 
 ## Vagrant
-![Tasks](https://trello.com/1/cards/6128b88a3b34072ee9d3cc95/attachments/6128b89955e40a89ca30466c/download/Screenshot_(67).png)
+![Tasks](img/vagrant_tasks.png)
 
 Within the VagrantFile, add the following line:
 config.vm.provision "shell", path: "provision.sh" <br/>
 Create a file named "provision.sh" within the same directory as the "VagrantFile". The script should be:<br/>
-<code>!#/bin/bash
+`!#/bin/bash`
 
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get install nginx -y</code>
+`sudo apt-get update -y`<br/>
+`sudo apt-get upgrade -y`<br/>
+`sudo apt-get install nginx -y`
 
 ### Installing dependencies for the 'app'
 
-- install npm: <code>sudo apt-get install npm -y</code>
-- install python-software-properties: <code>sudo apt-get install python-software-properties -y</code>
-- new source for nodejs: <code>curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -</code>
-- install nodejs <code>sudo apt-get install nodejs -y</code>
+- install npm: `sudo apt-get install npm -y`
+- install python-software-properties: `sudo apt-get install python-software-properties -y`
+- new source for nodejs: `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+- install nodejs `sudo apt-get install nodejs -y`
 - Change to the app directory <br/>
-<code>sudo apt-get install python-software-properties </code><br/>
-<code>curl -sL https://deb.nodesource.com/setup_6.x | </code><br/>
-<code>sudo -E bash - </code>
-- Inside the app directory, install pm2 <code>sudo npm install pm2 -y</code>
-- Install some relevant npm package files (app will throw an error if this is not done) <code>npm install</code>
-- Run npm: <code>npm start</code>
+`sudo apt-get install python-software-properties `<br/>
+`curl -sL https://deb.nodesource.com/setup_6.x | `<br/>
+`sudo -E bash - `
+- Inside the app directory, install pm2 `sudo npm install pm2 -y`
+- Install some relevant npm package files (app will throw an error if this is not done) `npm install`
+- Run npm: `npm start`
 
 ### Adding environment variable
-<code>export NAME=VALUE <br/></code>
+`export NAME=VALUE <br/>`
 #### Making it permanent: adding it to the .bashrc file:
-<code>echo "export NAME=VALUE" >> ~./bashrc </code>
+`echo "export NAME=VALUE" >> ~./bashrc `
 
 ### Configuring reverse proxy for nginx
 
-<code>sudo nano /etc/nginx/sites-available/default</code><br/>
-<code>location / {</code><br/>
-<code>        proxy_pass http://localhost:3000;</code><br/>
-<code>        proxy_http_version 1.1;</code><br/>
-<code>        proxy_set_header Upgrade $http_upgrade;</code><br/>
-<code>        proxy_set_header Connection 'upgrade';</code><br/>
-<code>        proxy_set_header Host $host;</code><br/>
-<code>        proxy_cache_bypass $http_upgrade;</code><br/>
-    <code>}</code>
+`sudo nano /etc/nginx/sites-available/default`<br/>
+
+```
+location / {
+    proxy_pass http://localhost:3000;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+    }
+```
 
 Restart nginx:
 
-<code>sudo nginx -t <br/>
-sudo systemctl restart nginx</code>
+`sudo nginx -t <br/>
+sudo systemctl restart nginx`
 
 ### On db machine:
 
-<code>sudo nano /etc/mongod.conf</code>
+`sudo nano /etc/mongod.conf`
 <br/>
 Change IP to 0.0.0.0 <br/>
 
 Restart mongo:<br/>
-<code>sudo systemctl restart mongod</code><br/>
-<code>sudo systemctl enable mongod</code><br/>
+`sudo systemctl restart mongod`<br/>
+`sudo systemctl enable mongod`<br/>
+
+Please see files <b>Vagrantfile</b> and <b>provision_app.sh/provision_db.sh</b> to see how all these steps have been automated.

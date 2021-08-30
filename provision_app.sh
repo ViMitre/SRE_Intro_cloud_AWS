@@ -12,11 +12,9 @@ sudo npm install pm2 -g
 npm install
 sudo rm /etc/nginx/sites-available/default
 sudo ln -s /home/vagrant/config_files/default /etc/nginx/sites-available/default
-export DB_HOST=192.168.10.150:27017/posts
-echo "export DB_HOST=192.168.10.150:27017/posts" >> ~/.bashrc
-source ~/.bashrc
 sudo nginx -t 
 sudo systemctl restart nginx
+echo "DB_HOST=mongodb://192.168.10.150:27017/posts" | sudo tee -a /etc/environment
 
 # sudo apt-get install git-core zsh -y
 # sudo sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -y)"

@@ -10,3 +10,4 @@ sudo systemctl enable mongod
 sudo ufw allow from 192.168.10.100/32 to any port 27017
 sudo rm /etc/mongod.conf
 sudo ln -s /home/vagrant/config_files/mongod.conf /etc/mongod.conf
+sudo systemctl restart mongod
